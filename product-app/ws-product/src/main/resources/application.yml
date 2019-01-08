@@ -1,0 +1,25 @@
+#spring.jpa.hibernate.ddl-auto=create
+#spring.datasource.url=jdbc:mysql://mysql:3306/sqli_database
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sqli
+    username: product
+    password: product
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: false
+
+logging.level.org.springframework.web: DEBUG
+logging.level.org.hibernate: ERROR
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://db-product:3306/sqli
+    username: product
+    password: product
+    driverClassName: com.mysql.cj.jdbc.Driver
