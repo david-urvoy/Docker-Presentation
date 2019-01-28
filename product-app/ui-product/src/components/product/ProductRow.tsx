@@ -13,7 +13,7 @@ export default class ProductRow extends React.Component<ProductRowProps, Product
 
     updateProduct = async (updatedProduct: Product) => {
         if (this.state !== updatedProduct)
-            this.setState(await (await fetch(`http://localhost:8080/product/${this.props.product.id}`, {
+            this.setState(await (await fetch(`http://172.16.2.3:8080/product/${this.props.product.id}`, {
                 method: 'PUT',
                 headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
                 body: JSON.stringify(updatedProduct)

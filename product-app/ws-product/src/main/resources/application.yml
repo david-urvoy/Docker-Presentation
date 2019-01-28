@@ -19,7 +19,7 @@ logging.level.org.hibernate: ERROR
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://db-product:3306/sqli
+    url: jdbc:mysql://red-db-product:3306/sqli
     username: product
     password: product
     driverClassName: com.mysql.cj.jdbc.Driver

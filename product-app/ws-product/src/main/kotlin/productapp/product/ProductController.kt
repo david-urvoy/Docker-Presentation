@@ -13,7 +13,10 @@ class ProductController(@Autowired private val repository: ProductRepository) {
     fun get(@PathVariable id: Int) = repository.findById(id).get()
 
     @GetMapping("")
-    fun getAll(): List<Product> = repository.findAll()
+    fun getAll(): List<Product> = repository.findAll().map {
+        it.name = "RED-${it.name}"
+        it
+    }
 
     @RequestMapping(method = [POST], path = [""])
     fun create(@RequestBody product: Product) = repository.save(product)
