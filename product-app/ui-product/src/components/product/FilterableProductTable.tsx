@@ -17,7 +17,7 @@ export default class FilterableProductTable extends Component<any, State> {
         this.updateState()
     }
 
-    updateState = () => fetch("http://172.16.2.3:8080/product")
+    updateState = () => fetch("http://172.16.3.3:8080/product")
         .then(response => response.json())
         .then(data => this.setState({ products: data as Product[] }))
 

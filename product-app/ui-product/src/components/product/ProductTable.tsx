@@ -27,7 +27,7 @@ export default class ProductTable extends React.Component<ProductTableProps, Pro
     toggleAdditionMode = (category: string) => this.setState(state => ({ additionMode: { ...state.additionMode, [category]: !state.additionMode[category] } }))
 
     deleteProduct = async (product: Product) => {
-        await fetch(`http://172.16.2.3:8080/product/${product.id}`, {
+        await fetch(`http://172.16.3.3:8080/product/${product.id}`, {
             method: 'DELETE',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
         })
@@ -35,7 +35,7 @@ export default class ProductTable extends React.Component<ProductTableProps, Pro
     }
 
     handleAddition = async (product: Product) => {
-        await fetch(`http://172.16.2.3:8080/product`, {
+        await fetch(`http://172.16.3.3:8080/product`, {
             method: 'POST',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
             body: JSON.stringify(product)

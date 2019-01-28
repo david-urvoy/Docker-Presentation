@@ -14,7 +14,7 @@ class ProductController(@Autowired private val repository: ProductRepository) {
 
     @GetMapping("")
     fun getAll(): List<Product> = repository.findAll().map {
-        it.name = "RED-${it.name}"
+        it.name = "GREEN-${it.name}"
         it
     }
 
