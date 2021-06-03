@@ -1,4 +1,4 @@
-# DockerSlides
+# Docker Interactive Presentation
 
 Pull the source and run :
 > python3 workflow/main.py
